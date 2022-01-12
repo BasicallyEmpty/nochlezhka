@@ -460,50 +460,58 @@
     </div>
   </div>
 
-  <section class="payment">
-    <div class="payment__popup">
-      <div class="popup__header">
-        <p class="header__title">купить билет</p>
-        <button class="popup__close-button" type="button"></button>
+
+
+  
+    <div class="popup popup_type_buy-ticket popup_opened">
+      <div class="popup__container popup__container_type_buy-ticket">
+        <form class="popup__buy-ticket-form" name="buy-ticket" id="buy-ticket">
+          <div class="popup__header">
+        <p class="popup__buy-ticket-header-text">купить билет</p>
+        <button class="popup__buy-ticket-close-button page__button" type="button">
+          <img src="./images/close-icon.svg" alt="закрыть" class="popup__buy-ticket-close-button-picture">
+        </button>
       </div>
-      <div class="popup__sum-options">
-        <p class="sum-options__header-text">сумма и количество</p>
-        <div class="popup__summary-amount">
-          <p class="summary-amount__result-text">500 Р</p>
-          <input class="summary-amount__controls" type="number">
+      <div class="popup__buy-ticket-options-container">
+        <p class="popup__buy-ticket-options-text">сумма и количество</p>
+        <div class="popup__buy-ticket-summary-container">
+          <p class="popup__buy-ticket-options-text">500 Р</p>
+          <input class="popup__buy-ticket-summary-input" name="ticket-amount-input" id="ticket-amount-input" type="number">
         </div>
       </div>
-      <div class="popup__email">
-        <p class="email__title">email</p>
-        <form class="email-form" name="email-info-form">
-					<fieldset class="email-form__input">
-						<input class="email-form__item" id="user-email-input" name="user-email" required type="text" placeholder="укажите почту для отправки чека">
+    <!-- Убрать лишние контейнеры -->
+      <div class="popup__buy-ticket-email-container">
+        <p class="popup__buy-ticket-options-text">email</p>
+        <input type="email" name="email" id="email" placeholder="укажите почту для отправки чека"class="popup__email-input" required>
       </div>
       <div class="popup__payment-selection">
-        <p class="payment-selection-title">способ оплаты</p>
-        <form class="payment-selection-form">
-          <fieldset class="payment-selection-input">
-            <div>
-              <input type="radio" id="paypal" name="payment-choice"  value="paypal">
-              <label for="huey">Paypal</label>
-          </div>
-          <div>
-              <input type="radio" id="bank-card"  name="payment-choice" value="bank card">
-              <label for="dewey">Банковская карта</label>           
-          </div>
-          </fieldset>
-        </form>
+        <fieldset class="popup__payment-method">
+          <label for="card" class="popup__payment-method-label">
+            <input type="radio" name="payment" id="card" value="банковской картой" class="popup__form-radio" checked>
+            <span class="popup__pseudo-item popup__pseudo-item_payment"></span>
+            <span>банковской картой</span>
+          </label>
+          <label for="paypal" class="popup__payment-method-label">
+            <input type="radio" name="payment" id="paypal" value="paypal" class="popup__form-radio">
+            <span class="popup__pseudo-item popup__pseudo-item_payment"></span>
+            <span>PayPal</span>
+          </label>
+        </fieldset>        
         <div class="payment-agreement">
-          <p class="agreement-text">
-            Нажимая кнопку «пожертвовать» вы соглашаетесь с условиями <span class="highlight-text">оферты, политики</span> в отношении обработки и защиты персональных данных
-            и даёте <span class="highlight-text">согласие</span> на их обработку
-          </p>
+          <p class="popup__offer">Нажимая кнопку «пожертвовать» вы соглашаетесь с условиями <a href="#"
+            class="popup__offer popup__offer_color_blue page__link" target="_blank">оферты</a>, <a href="#"
+            class="popup__offer popup__offer_color_blue page__link" target="_blank">политики</a> в отношении обработки
+          и защиты персональных данных и даёте <a href="#" class="popup__offer popup__offer_color_blue page__link"
+            target="_blank">согласие</a> на их обработку</p>
         </div>
-        <button class="form-submit-button" type="submit">Перейти к оплате</button>
+      </form>
+      <button class="popup__donate-button page__button" type="submit" form="donate">
+        <span class="popup__donate-button-text">перейти к оплате</span>
+      </button>
       </div>
-      
     </div>
-  </section>
+    </div>
+ 
 
   <script src="scripts/index.js"></script>
 </body>

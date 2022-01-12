@@ -1,17 +1,29 @@
-.payment {
-  margin: auto;
-  width: 612px;
-  height: 712px;
-  background-color: grey;
+.develop-pay {
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
 }
-.payment__popup {
-  width: 612px;
-  height: 720px;
-  
+.popup_type_buy-ticket {
+  margin: 108px auto 0;
+  box-shadow: 0px 4px 12px rgba(59, 55, 72, 0.12);
+  border-radius: 24px 24px 0px 0px;
+  max-height: 808px;
+  box-sizing: border-box;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: 20px;  
+}
+
+.popup__container_type_buy-ticket {
+  margin-top: 128px;
+  max-width: 612px;
+  max-height: 780px;
+  border-radius: 24px;
+  padding-bottom: 40px;
+  flex-flow: column;
 }
 
 .popup__close-button {
-  background-image: url("./images/close-icon.svg");
   height: 24px;
   width: 24px;
 }
@@ -23,7 +35,7 @@
   margin-bottom: 20px;
 }
 
-.header__title {
+.popup__buy-ticket-header-text{
   margin: 0;
   font-weight: 500;
   font-size: 48px;
@@ -31,15 +43,15 @@
   
 }
 
-.popup__sum-options {
+.popup__buy-ticket-options-container {
   margin: 0 40px;
 }
 
-.popup__summary-amount {
+.popup__buy-ticket-summary-container {
   margin-top: 16px;
 }
 
-.sum-options__header-text {
+.popup__buy-ticket-options-text {
   margin: 0;
   font-weight: 500;
   font-size: 32px;
@@ -59,17 +71,12 @@
 }
 
 
-.popup__email {
+.popup__buy-ticket-email-container {
   margin: 32px 40px 0;
   
 }
 
-.email__title {
-  margin: 0;
-  font-weight: 500;
-  font-size: 32px;
-  line-height: 36px;
-}
+
 
 .email-form {
   margin-top: 16px;
@@ -86,13 +93,6 @@
 
 .popup__payment-selection {
   margin: 32px 40px 0;
-}
-
-.payment-selection-title {
-  margin: 0;
-  font-weight: 500;
-  font-size: 32px;
-  line-height: 36px;
 }
 
 .payment-selection-input {
