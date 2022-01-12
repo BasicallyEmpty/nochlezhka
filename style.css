@@ -1,0 +1,114 @@
+.payment {
+  margin: auto;
+  width: 612px;
+  height: 712px;
+  background-color: grey;
+}
+.payment__popup {
+  width: 612px;
+  height: 720px;
+  
+}
+
+.popup__close-button {
+  background-image: url("./images/close-icon.svg");
+  height: 24px;
+  width: 24px;
+}
+
+.popup__header {
+  display: flex;
+  justify-content: space-between;
+  margin: 40px;
+  margin-bottom: 20px;
+}
+
+.header__title {
+  margin: 0;
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 52px;
+  
+}
+
+.popup__sum-options {
+  margin: 0 40px;
+}
+
+.popup__summary-amount {
+  margin-top: 16px;
+}
+
+.sum-options__header-text {
+  margin: 0;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 36px;
+}
+
+.summary-amount__result-text {
+  margin: 0;
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 52px;
+}
+
+.summary-amount__controls {
+  width: 192px;
+  height: 48px;
+}
+
+
+.popup__email {
+  margin: 32px 40px 0;
+  
+}
+
+.email__title {
+  margin: 0;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 36px;
+}
+
+.email-form {
+  margin-top: 16px;
+}
+
+.email-form__input {
+ padding: 0;
+ 
+}
+
+.email-form__item {
+  width: 100%;
+}
+
+.popup__payment-selection {
+  margin: 32px 40px 0;
+}
+
+.payment-selection-title {
+  margin: 0;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 36px;
+}
+
+.payment-selection-input {
+  display: flex;
+  flex-flow: column;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.agreement-text {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.highlight-text {
+  color: #7100FF;
+}

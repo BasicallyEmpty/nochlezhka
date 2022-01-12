@@ -6,10 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Гедонизм-фест</title>
   <link rel="stylesheet" href="pages/index.css"> <!-- файл стилей -->
+  <link rel="stylesheet" href="./style.css"> <!-- Временный файл стилей -->
 </head>
 
 <body class="page">
-  <header class="header">
+  
+  <header class="header">    
     <div class="header__container">
       <img src="./images/logo.svg" alt="logo" class="header__logo">
       <div class="header__menu">
@@ -457,6 +459,51 @@
       </button>
     </div>
   </div>
+
+  <section class="payment">
+    <div class="payment__popup">
+      <div class="popup__header">
+        <p class="header__title">купить билет</p>
+        <button class="popup__close-button" type="button"></button>
+      </div>
+      <div class="popup__sum-options">
+        <p class="sum-options__header-text">сумма и количество</p>
+        <div class="popup__summary-amount">
+          <p class="summary-amount__result-text">500 Р</p>
+          <input class="summary-amount__controls" type="number">
+        </div>
+      </div>
+      <div class="popup__email">
+        <p class="email__title">email</p>
+        <form class="email-form" name="email-info-form">
+					<fieldset class="email-form__input">
+						<input class="email-form__item" id="user-email-input" name="user-email" required type="text" placeholder="укажите почту для отправки чека">
+      </div>
+      <div class="popup__payment-selection">
+        <p class="payment-selection-title">способ оплаты</p>
+        <form class="payment-selection-form">
+          <fieldset class="payment-selection-input">
+            <div>
+              <input type="radio" id="paypal" name="payment-choice"  value="paypal">
+              <label for="huey">Paypal</label>
+          </div>
+          <div>
+              <input type="radio" id="bank-card"  name="payment-choice" value="bank card">
+              <label for="dewey">Банковская карта</label>           
+          </div>
+          </fieldset>
+        </form>
+        <div class="payment-agreement">
+          <p class="agreement-text">
+            Нажимая кнопку «пожертвовать» вы соглашаетесь с условиями <span class="highlight-text">оферты, политики</span> в отношении обработки и защиты персональных данных
+            и даёте <span class="highlight-text">согласие</span> на их обработку
+          </p>
+        </div>
+        <button class="form-submit-button" type="submit">Перейти к оплате</button>
+      </div>
+      
+    </div>
+  </section>
 
   <script src="scripts/index.js"></script>
 </body>
