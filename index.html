@@ -468,15 +468,19 @@
         <form class="popup__buy-ticket-form" name="buy-ticket" id="buy-ticket">
           <div class="popup__header">
         <p class="popup__buy-ticket-header-text">купить билет</p>
-        <button class="popup__buy-ticket-close-button page__button" type="button">
+        <button class="popup__buy-ticket-close-button page__button" type="button" id="buy-ticket-close-button">
           <img src="./images/close-icon.svg" alt="закрыть" class="popup__buy-ticket-close-button-picture">
         </button>
       </div>
       <div class="popup__buy-ticket-options-container">
         <p class="popup__buy-ticket-options-text">сумма и количество</p>
         <div class="popup__buy-ticket-summary-container">
-          <p class="popup__buy-ticket-options-text">500 Р</p>
+          <p class="popup__buy-ticket-options-text" id="buy-ticket-price"><span class="color-purple">500 Р</span></p>
+          <div>
+          <button class="popup__buy-ticket-summary-input-button" type="button" id="add-button">+</button>          
           <input class="popup__buy-ticket-summary-input" name="ticket-amount-input" id="ticket-amount-input" type="number">
+          <button class="popup__buy-ticket-summary-input-button" type="button" id="subtract-button">-</button>
+        </div>
         </div>
       </div>
     <!-- Убрать лишние контейнеры -->
@@ -498,11 +502,11 @@
           </label>
         </fieldset>        
         <div class="payment-agreement">
-          <p class="popup__offer">Нажимая кнопку «пожертвовать» вы соглашаетесь с условиями <a href="#"
+          <p class="popup__offer">Нажимая кнопку «пожертвовать» вы соглашаетесь с условиями <a href="#"
             class="popup__offer popup__offer_color_blue page__link" target="_blank">оферты</a>, <a href="#"
-            class="popup__offer popup__offer_color_blue page__link" target="_blank">политики</a> в отношении обработки
-          и защиты персональных данных и даёте <a href="#" class="popup__offer popup__offer_color_blue page__link"
-            target="_blank">согласие</a> на их обработку</p>
+            class="popup__offer popup__offer_color_blue page__link" target="_blank">политики</a> в отношении обработки
+          и защиты персональных данных и даёте <a href="#" class="popup__offer popup__offer_color_blue page__link"
+            target="_blank">согласие</a> на их обработку</p>
         </div>
       </form>
       <button class="popup__donate-button page__button" type="submit" form="donate">
@@ -514,6 +518,7 @@
  
 
   <script src="scripts/index.js"></script>
+  <script src="script.js"></script>
 </body>
 
 </html>

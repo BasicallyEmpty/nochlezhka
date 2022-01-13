@@ -48,6 +48,8 @@
 }
 
 .popup__buy-ticket-summary-container {
+  display: flex;
+  justify-content: space-between;
   margin-top: 16px;
 }
 
@@ -111,4 +113,19 @@
 
 .highlight-text {
   color: #7100FF;
+}
+
+
+.popup__buy-ticket-summary-input {
+  width: 96px;
+  height: 48px;
+}
+
+.popup__buy-ticket-summary-input-button {
+  width: 48px;
+  height: 48px;
+}
+
+.color-purple {
+  color:#7100FF;
 }
