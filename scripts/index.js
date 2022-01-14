@@ -137,7 +137,7 @@ openDonateButtonInPopup.addEventListener('click', function () {
 })
 
 openDonateButtonInHeader.addEventListener('click', function () {
-  openPopup(popupDonate)
+  window.location.href = '/thanks.html'
 })
 
 closeDonateButton.addEventListener('click', function () {

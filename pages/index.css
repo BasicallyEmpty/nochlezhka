@@ -28,7 +28,9 @@
 @import url(../blocks/header/_hidden/header_hidden.css);
 
 @import url(../blocks/main-screen/main-screen.css);
+@import url(../blocks/main-screen/__content/main-screen__content.css);
 @import url(../blocks/main-screen/__text/main-screen__text.css);
+@import url(../blocks/main-screen/__text2/main-screen__text2.css);
 @import url(../blocks/main-screen/__learn-more/main-screen__learn-more.css);
 
 @import url(../blocks/about-action/about-action.css);
