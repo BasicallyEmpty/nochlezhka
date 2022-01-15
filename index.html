@@ -437,6 +437,7 @@
           class="popup__email-input">
         <p class="popup__donate-text">способ оплаты</p>
         <fieldset class="popup__payment-method">
+    
           <label for="card" class="popup__payment-method-label">
             <input type="radio" name="payment" id="card" value="банковской картой" class="popup__form-radio" checked>
             <span class="popup__pseudo-item popup__pseudo-item_payment"></span>
@@ -483,22 +484,16 @@
         </div>
         </div>
       </div>
-    <!-- Убрать лишние контейнеры -->
       <div class="popup__buy-ticket-email-container">
         <p class="popup__buy-ticket-options-text">email</p>
         <input type="email" name="email" id="email" placeholder="укажите почту для отправки чека"class="popup__email-input">
       </div>
       <div class="popup__payment-selection">
         <fieldset class="popup__payment-method">
-          <label for="card" class="popup__payment-method-label">
-            <input type="radio" name="payment" id="card" value="банковской картой" class="popup__form-radio" checked>
-            <span class="popup__pseudo-item popup__pseudo-item_payment"></span>
-            <span>банковской картой</span>
-          </label>
-          <label for="paypal" class="popup__payment-method-label">
-            <input type="radio" name="payment" id="paypal" value="paypal" class="popup__form-radio">
-            <span class="popup__pseudo-item popup__pseudo-item_payment"></span>
-            <span>PayPal</span>
+          <label for = "card-rad" class="payment-method-label"> 
+            <span>Банковская карта</span> <input type="radio" name ="payment-rad" id="card" value="Карта" class="payment-radio-button" checked>
+            <span>Paypal</span> <input type="radio" name ="payment-rad" id="paypal" value="paypal" class="payment-radio-button">
+            
           </label>
         </fieldset>        
         <div class="payment-agreement">
