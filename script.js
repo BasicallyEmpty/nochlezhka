@@ -6,34 +6,54 @@ const ticketPrice = buyTicket.querySelector("#buy-ticket-price");
 const addBtn = buyTicket.querySelector("#add-button")
 const subtractButton = buyTicket.querySelector("#subtract-button");
 const amountInput = buyTicket.querySelector("#ticket-amount-input");
+const emailInput = buyTicket.querySelector("#email");
+const form = buyTicket.querySelector("#buy-ticket");
 amountInput.value = 0;
 
-let array = [];
-array = ticketPrice.textContent.split(" ");
-array.pop();
-console.log(array);
-let number = array[0];
-console.log(number);
+
 
 
 
 addBtn.addEventListener("click", function () {
-  let count = amountInput.value;
-  count++;
-  amountInput.value = count;  
-  number = count * number;
-  ticketPrice.textContent = number;
+  let array = [];
+array = ticketPrice.textContent.split(" ");
+array.pop();
+console.log(array);
+let number = parseInt(array[0]);
+console.log(number);
+  amountInput.value++;
+  let price = number + 500;
+  ticketPrice.textContent = price + " Р";
+  console.log(price);
+  console.log(number);
+  
+ 
 })
 
 subtractButton.addEventListener("click", function () {
-  let count = amountInput.value;
-  if(count > 0) {
-    count--;
-  amountInput.value = count;
-  number = count / number; 
-  ticketPrice.textContent = number; 
-  }  
+  let array = [];
+  array = ticketPrice.textContent.split(" ");
+  array.pop();
+  console.log(array);
+  let number = parseInt(array[0]);
+  console.log(number);
+    amountInput.value++;
+    let price = number - 500;
+    ticketPrice.textContent = price + " Р";
+    console.log(price);
+    console.log(number);
+    
 })
+
+
+function submitCard(event) {
+  
+	event.preventDefault();	
+  const clientInfo = {};
+  clientInfo.email = emailInput.value;
+  clientInfo.price = ticketPrice.textContent;
+  console.log(clientInfo);
+}
 
 
 //Получить значение из инпута
@@ -45,3 +65,5 @@ subtractButton.addEventListener("click", function () {
 closeBtn.addEventListener("click", function () {
   buyTicket.classList.toggle("popup_opened");
 });
+
+form.addEventListener("submit", submitCard);
