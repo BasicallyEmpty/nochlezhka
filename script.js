@@ -1,4 +1,4 @@
-console.log("Йоу");
+console.log("(^^)");
 
 const buyTicket = document.querySelector(".popup_type_buy-ticket");
 const closeBtn = buyTicket.querySelector("#buy-ticket-close-button");
@@ -9,75 +9,45 @@ const amountInput = buyTicket.querySelector("#ticket-amount-input");
 const emailInput = buyTicket.querySelector("#email");
 const form = buyTicket.querySelector("#buy-ticket");
 const paymentRadioArr = document.getElementsByName("payment-rad");
+const startingPrice = 500;
 
+function getNumber () {
+  const numbers = ticketPrice.textContent.split(" ");
+  const number = parseInt(numbers[0]);
+  return number;
+}
 
-
-amountInput.value = 0;
-
-
-//Добавить проверку на 0
-//Получить значение радиокнопки
-
-addBtn.addEventListener("click", function () {
-  let array = [];
-  array = ticketPrice.textContent.split(" ");
-  array.pop();
-  console.log(array);
-  let number = parseInt(array[0]);
-  console.log(number);
-  let price = number + 500;
-  ticketPrice.textContent = price + " Р";
-  console.log(price);
-  console.log(number);
+addBtn.addEventListener("click", function () {  
+  const number = getNumber();  
+  const price = number + startingPrice;
+  ticketPrice.textContent = price + " Р";   
   amountInput.value++; 
 })
 
 subtractButton.addEventListener("click", function () {
-  let array = [];
-  array = ticketPrice.textContent.split(" ");
-  array.pop();
-  console.log(array);
-  let number = parseInt(array[0]);
-  console.log(number);
-  let price = number - 500;
-  ticketPrice.textContent = price + " Р";
-  console.log(price);
-  console.log(number);amountInput  
+  if(amountInput.value < 2) return;
+  const number = getNumber();
+  const price = number - startingPrice;
+  ticketPrice.textContent = price + " Р";  
   amountInput.value--; 
 })
 
+closeBtn.addEventListener("click", function() {
+  buyTicket.classList.toggle("popup_opened");
+})
 
-function submitCard(event) {
-  
+
+function submitCard(event) {  
 	event.preventDefault();	
   const clientInfo = {};
   clientInfo.email = emailInput.value;
-  clientInfo.price = ticketPrice.textContent;
-  //Фильтрация массива
-  const checkedArr = paymentRadioArr;
-  let result;
-  for(let i=0; i<checkedArr.length; i++) {
-    if(checkedArr[i].checked) {
-      result = checkedArr[i].value;
-    }
-  }
-  clientInfo.method = result;
+  clientInfo.total = ticketPrice.textContent;
+  const radioBtns = [];
+  paymentRadioArr.forEach(function (radioBtn) {radioBtns.push(radioBtn);})
+  paymentRadioArr.forEach(function(radioBtn) {
+    if(radioBtn.checked) {clientInfo.method = radioBtn.value};
+  })
   console.log(clientInfo);
 }
-
-function click () {
-  console.log("click");
-}
-
-for(let i=0; i<paymentRadioArr.length; i++) {
-  paymentRadioArr[i].onchange = testRadio;
-}
-
-
-
-form.addEventListener("submit", submitCard);
-
-function testRadio () {
-  console.log(this.value);
-}
-
+  amountInput.value = 1;
+  form.addEventListener("submit", submitCard);

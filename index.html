@@ -436,8 +436,7 @@
         <input type="email" name="email" id="email" placeholder="укажите почту для отправки чека"
           class="popup__email-input">
         <p class="popup__donate-text">способ оплаты</p>
-        <fieldset class="popup__payment-method">
-    
+        <fieldset class="popup__payment-method">    
           <label for="card" class="popup__payment-method-label">
             <input type="radio" name="payment" id="card" value="банковской картой" class="popup__form-radio" checked>
             <span class="popup__pseudo-item popup__pseudo-item_payment"></span>
@@ -449,7 +448,7 @@
             <span>PayPal</span>
           </label>
         </fieldset>
-        <p class="popup__offer">Нажимая кнопку «пожертвовать» вы соглашаетесь с условиями <a href="#"
+        <p class="popup__offer">Нажимая кнопку «пожертвовать» вы соглашаетесь с условиями <a href="#"
             class="popup__offer popup__offer_color_blue page__link" target="_blank">оферты</a>, <a href="#"
             class="popup__offer popup__offer_color_blue page__link" target="_blank">политики</a> в отношении обработки
           и защиты персональных данных и даёте <a href="#" class="popup__offer popup__offer_color_blue page__link"
@@ -463,7 +462,7 @@
 
 
 
-  
+  <!-- покупка билета -->
     <div class="popup popup_type_buy-ticket popup_opened">
       <div class="popup__container popup__container_type_buy-ticket">
         <form class="popup__buy-ticket-form" name="buy-ticket" id="buy-ticket">
@@ -486,22 +485,19 @@
       </div>
       <div class="popup__buy-ticket-email-container">
         <p class="popup__buy-ticket-options-text">email</p>
-        <input type="email" name="email" id="email" placeholder="укажите почту для отправки чека"class="popup__email-input">
+        <input type="email" name="email" id="email" placeholder="укажите почту для отправки чека"class="popup__email-input" required>
       </div>
       <div class="popup__payment-selection">
         <fieldset class="popup__payment-method">
-          <label for = "card-rad" class="payment-method-label"> 
-            <span>Банковская карта</span> <input type="radio" name ="payment-rad" id="card" value="Карта" class="payment-radio-button" checked>
-            <span>Paypal</span> <input type="radio" name ="payment-rad" id="paypal" value="paypal" class="payment-radio-button">
-            
-          </label>
+          <span>Банковская карта</span> <input type="radio" name ="payment-rad" id="card" value="Карта" class="payment-radio-button" checked>
+          <span>Paypal</span> <input type="radio" name ="payment-rad" id="paypal" value="paypal" class="payment-radio-button">
         </fieldset>        
         <div class="payment-agreement">
           <p class="popup__offer">Нажимая кнопку «пожертвовать» вы соглашаетесь с условиями <a href="#"
             class="popup__offer popup__offer_color_blue page__link" target="_blank">оферты</a>, <a href="#"
             class="popup__offer popup__offer_color_blue page__link" target="_blank">политики</a> в отношении обработки
-          и защиты персональных данных и даёте <a href="#" class="popup__offer popup__offer_color_blue page__link"
-            target="_blank">согласие</a> на их обработку</p>
+          и защиты персональных данных и даёте <a href="#" class="popup__offer popup__offer_color_blue page__link"
+            target="_blank">согласие</a>на их обработку</p>
         </div>
       </form>
       <button class="popup__donate-button page__button" type="submit">
