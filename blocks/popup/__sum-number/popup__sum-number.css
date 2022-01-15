@@ -1,0 +1,12 @@
+.popup__sum-number{
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  border: 2px solid #7100FF;
+  border-radius: 22px;
+  margin: 0;
+  padding: 0;
+
+}
+
