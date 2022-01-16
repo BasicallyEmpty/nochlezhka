@@ -1,0 +1,20 @@
+.error404__title {
+  font-family: TT_Firs_Neue;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 52px;
+  color: #3B3748;
+  margin: 58.5px auto 16px 0;
+}
+
+@media screen and (max-width: 900px) {
+  .error404__title {
+    font-size: 32px;
+    line-height: 36px;
+    margin: 0 auto 12px 0;
+  }
+}
+
+
+
