@@ -177,8 +177,42 @@ window.addEventListener('scroll', () => {
 
 const donateFormElement = document.querySelector('.popup__donate-form');
 
+// Для вывода информации о платежах в консоль (сумма, email, способ платежа)
+const emailDonateForm = popupDonate.querySelector('.popup__email-input');
+const cardPayRadio = popupDonate.querySelector('#card');
+
+let donateFormInfo = {
+  sum: "",
+  email: "",
+  payment: ""
+};
+
+function cleanDonateInfo() {
+  donateFormInfo.sum = "";
+  donateFormInfo.email = "";
+  donateFormInfo.payment = "";
+}
+
+function fillDonateInfo() {
+  const sumDonateInfo = popupDonate.querySelector('.popup__sum-of-money_active');
+  if (sumDonateInfo) {
+    donateFormInfo.sum = sumDonateInfo.value;
+  } else {
+    donateFormInfo.sum = inputSum.value;
+  }
+  donateFormInfo.email = emailDonateForm.value;
+  if (cardPayRadio.checked) {
+    donateFormInfo.payment = "card";
+  } else {
+    donateFormInfo.payment = "paypal";
+  }
+  console.log(donateFormInfo);
+  cleanDonateInfo();
+}
+
 donateFormElement.addEventListener('submit', (evt) => {
   evt.preventDefault();
   closePopup(popupDonate);
+  fillDonateInfo();
   donateFormElement.reset();
 });
