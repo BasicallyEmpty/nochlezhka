@@ -86,6 +86,15 @@
 @import url(../blocks/popup/__donate-button/popup__donate-button.css);
 @import url(../blocks/popup/__donate-button-text/popup__donate-button-text.css);
 
+@import url(../blocks/popup/__sum/popup__sum.css);
+@import url(../blocks/popup/__sum-price/popup__sum-price.css);
+@import url(../blocks/popup/__sum-number/popup__sum-number.css);
+@import url(../blocks/popup/__number-minus/popup__number-minus.css);
+@import url(../blocks/popup/__number-plus/popup__number-plus.css);
+@import url(../blocks/popup/__number/popup__number.css);
+@import url(../blocks/popup/__number-img/popup__number-img.css);
+
+
 @import url(../blocks/events/events.css);
 @import url(../blocks/events/__wrapper/events__wrapper.css);
 @import url(../blocks/events/__title/events__title.css);

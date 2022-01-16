@@ -182,3 +182,51 @@ donateFormElement.addEventListener('submit', (evt) => {
   closePopup(popupDonate);
   donateFormElement.reset();
 });
+
+//Попап "Купить билет"//
+
+const plusBtPopup=document.querySelector('.popup__number-plus');      //кнопка +
+const minusBtPopup=document.querySelector('.popup__number-minus');    // кнопка -
+const sumTicket=document.querySelector('.popup__number');             //кол-во билетов
+const closePopupTicket=document.querySelector('.popup-ticket-close');
+const popupTicket=document.querySelector('.popup-ticket');
+const priceTicket=document.querySelector('.popup__sum-price');        //сумма в рублях
+const emailInput=document.querySelector('.popup-ticket-email');       // поле инпута с email
+const ticketFormElement=document.querySelector('.popup-ticket-form'); //форма попапа покупки билета
+
+
+closePopupTicket.addEventListener('click', function () {              // закрытие попапа
+  //console.log('закрыть');
+  closePopup(popupTicket);
+})
+let b=1;
+plusBtPopup.addEventListener('click', (evt) => {                      //плюс один билет
+  evt.preventDefault();
+  b=b+1;
+  //console.log(sumTicket);
+  //console.log(b)
+  sumTicket.value=b;
+  priceTicket.textContent=(b * 500) +' ₽';
+  return sumTicket.value;
+  return b;
+});
+
+minusBtPopup.addEventListener('click', (evt) => {                     //минус один билет
+  evt.preventDefault();
+  b=b-1;
+  console.log(sumTicket);
+  console.log(b);
+  sumTicket.value=b;
+  priceTicket.textContent=(b * 500)  +' ₽';
+  return sumTicket.value;
+  return b;
+
+});
+ticketFormElement.addEventListener('submit', (evt) => {
+  evt.preventDefault();
+  const obj = {sum: sumTicket.value, sumPrice: priceTicket.textContent, email: emailInput.value};
+  console.log(obj);
+  closePopup(popupTicket);
+  ticketFormElement.reset();
+
+});

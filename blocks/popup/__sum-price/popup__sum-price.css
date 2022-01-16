@@ -1,0 +1,15 @@
+.popup__sum-price{
+  font-style: normal;
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 52px;
+  color: #7100FF;
+  padding: 0;
+  margin: 0;
+}
+@media screen and (max-width: 768.98px) {
+  .popup__sum-price{
+    font-size: 32px;
+    line-height: 36px;
+  }
+}

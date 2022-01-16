@@ -1,0 +1,17 @@
+.popup__number-minus{
+  background: #7100FF;
+  border-radius: 20px 0px 0px 20px;
+  border: 2px solid #7100FF;
+  width: 48px;
+  height: 48px;
+  border: none;
+  margin: 0;
+  padding: 0;
+
+}
+@media screen and (max-width: 768.98px) {
+  .popup__number-minus{
+    width: 44px;
+    height: 44px;
+  }
+}
