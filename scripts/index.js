@@ -190,6 +190,9 @@ const sumTicket=document.querySelector('.popup__number');//кол-во биле�
 const closePopupTicket=document.querySelector('.popup-ticket-close');
 const popupTicket=document.querySelector('.popup-ticket');
 const priceTicket=document.querySelector('.popup__sum-price');//сумма в рублях
+const emailInput=document.querySelector('.popup-ticket-email');
+const ticketFormElement=document.querySelector('.popup-ticket-form');
+
 
 closePopupTicket.addEventListener('click', function () {// закрытие попапа
   console.log('закрыть');
@@ -216,4 +219,11 @@ minusBtPopup.addEventListener('click', (evt) => {//минус один биле�
   priceTicket.textContent=(b * 500)  +' ₽';
   return sumTicket.value;
   return b;
+});
+ticketFormElement.addEventListener('submit', (evt) => {
+  evt.preventDefault();
+  const obj={sum: priceTicket, email: emailInput.value};
+  console.log(obj);
+  closePopup(popupTicket);
+
 });
