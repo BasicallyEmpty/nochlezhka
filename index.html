@@ -6,11 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Гедонизм-фест</title>
   <link rel="stylesheet" href="pages/index.css"> <!-- файл стилей -->
-  <link rel="stylesheet" href="./style.css"> <!-- Временный файл стилей -->
+  <link rel="stylesheet" href="pages/developPaymentStyle.css"> <!-- Временный файл стилей -->
 </head>
-
-<body class="page">
-  
+<body class="page">  
   <header class="header">    
     <div class="header__container">
       <img src="./images/logo.svg" alt="logo" class="header__logo">
@@ -30,10 +28,10 @@
             <p class="header__link-text">о фестивале</p>
           </a>
         </nav>
-        <a class="header__link page__link" href="#" target="_blank">
+        <button class="header__buy-ticket-button page__button" id="buy-ticketBtn">         
           <img src="./images/like.svg" alt="like" class="header__like-image">
-          <p class="header__link-text">хочу пойти</p>
-        </a>
+          <p class="header__link-text">хочу пойти</p>         
+        </button>        
         <button class="header__menu-button page__button" type="button">
           <img src="./images/menu.svg" alt="menu">
         </button>
@@ -460,16 +458,14 @@
     </div>
   </div>
 
-
-
   <!-- покупка билета -->
-    <div class="popup popup_type_buy-ticket popup_opened">
+    <div class="popup popup_type_buy-ticket">
       <div class="popup__container popup__container_type_buy-ticket">
         <form class="popup__buy-ticket-form" name="buy-ticket" id="buy-ticket">
-          <div class="popup__header">
-        <p class="popup__buy-ticket-header-text">купить билет</p>
-        <button class="popup__buy-ticket-close-button page__button" type="button" id="buy-ticket-close-button">
-          <img src="./images/close-icon.svg" alt="закрыть" class="popup__buy-ticket-close-button-picture">
+          <div class="popup__buy-ticket-header">
+        <button class="popup__donate-close-button page__button" type="button" id="buy-ticket-close-button">
+          <span class="popup__donate-close-button-text">Купить билет</span>
+          <img src="./images/close-icon.svg" alt="закрыть" class="popup__donate-close-button-picture">
         </button>
       </div>
       <div class="popup__buy-ticket-options-container">
@@ -489,11 +485,19 @@
       </div>
       <div class="popup__payment-selection">
         <fieldset class="popup__payment-method">
-          <span>Банковская карта</span> <input type="radio" name ="payment-rad" id="card" value="Карта" class="payment-radio-button" checked>
-          <span>Paypal</span> <input type="radio" name ="payment-rad" id="paypal" value="paypal" class="payment-radio-button">
-        </fieldset>        
+          <label for="cardPayment" class="popup__payment-method-label">
+            <input type="radio" name="payment-rad" id="cardPayment" value="банковской картой" class="popup__form-radio" checked>
+            <span class="popup__pseudo-item popup__pseudo-item_payment"></span>
+            <span>банковской картой</span>
+          </label>
+          <label for="paypalPayment" class="popup__payment-method-label">
+            <input type="radio" name="payment-rad" id="paypalPayment" value="paypal" class="popup__form-radio">
+            <span class="popup__pseudo-item popup__pseudo-item_payment"></span>
+            <span>PayPal</span>
+          </label>
+        </fieldset>
         <div class="payment-agreement">
-          <p class="popup__offer">Нажимая кнопку «пожертвовать» вы соглашаетесь с условиями <a href="#"
+          <p class="popup__offer">Нажимая кнопку «пожертвовать» вы соглашаетесь с условиями<a href="#"
             class="popup__offer popup__offer_color_blue page__link" target="_blank">оферты</a>, <a href="#"
             class="popup__offer popup__offer_color_blue page__link" target="_blank">политики</a> в отношении обработки
           и защиты персональных данных и даёте <a href="#" class="popup__offer popup__offer_color_blue page__link"
@@ -506,10 +510,8 @@
       </div>
     </div>
     </div>
- 
-
+    
   <script src="scripts/index.js"></script>
-  <script src="script.js"></script>
 </body>
 
 </html>
